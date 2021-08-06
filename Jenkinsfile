@@ -19,7 +19,7 @@ pipeline {
         stage('Build Docker image'){
             steps {
               
-                sh 'docker build -t  raj89in/docker_jenkins_springboot:${BUILD_NUMBER} .'
+                sh 'docker build -t  raj89in/docker_jenkins_springboot:1 .'
             }
         }
 
@@ -41,7 +41,7 @@ pipeline {
         stage('Docker deploy'){
             steps {
                
-                sh 'docker run -itd -p  8081:8080 raj89in/docker_jenkins_springboot:${BUILD_NUMBER}'
+                sh 'docker run -itd -p  8081:8080 raj89in/docker_jenkins_springboot:1'
             }
         }
 
