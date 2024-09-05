@@ -10,6 +10,7 @@ public class AppController {
 	
 	@GetMapping
 	public String getName() {
+		// Test Comment
 		return "Welcome to simplilearn project on CI/CD spring boot project.";
 	}
 
